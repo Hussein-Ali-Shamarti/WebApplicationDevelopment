@@ -3,9 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spa Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cloud Spa</title>
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <nav class="navigation">
+        <a href="#" class="logo-container">
+          <img src="CloudLogoTransaprent1.png" alt="imagelogo" class="logoo" />
+        </a>
+
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">Spa</a>
+        <a href="#">Services</a>
+        <button class="btnLogin-popup">Book Now</button>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>login</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label> <input type="checkbox" /> Remember Me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Sign In</button>
+          <div class="login-register">
+            <p>
+              Don't have an account yet?
+              <a href="#" class="register-link">Create one now.</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="email" required />
+            <label>Username</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" /> I agree to the terms and
+              conditions</label
+            >
+          </div>
+
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account?
+              <a href="#" class="login-link">Sign in now.</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main id="main-content">
+      <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <img src="CloudSpaTransaprent.png" alt="imagelogo" class="logoFooter" />
+
+        <nav class="footer-navigation">
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+          <a href="#">Spa</a>
+          <a href="#">Services</a>
+        </nav>
+      </div>
+      <p>&copy; 2024 Spa Studio</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      // Sample function to navigate and load content dynamically
+      function navigateTo(section) {
+        const mainContent = document.getElementById("main-content");
+        fetchContent(section).then((content) => {
+          mainContent.innerHTML = content;
+        });
+      }
+
+      // Sample function to fetch content (you need to implement this)
+      function fetchContent(section) {
+        // Implement logic to fetch content based on the section
+        // You may use fetch or load HTML files dynamically
+        // Return a promise that resolves with the content
+        return new Promise((resolve) => {
+          // Example: resolve with simple HTML content
+          resolve(
+            `<h2>${
+              section.charAt(0).toUpperCase() + section.slice(1)
+            }</h2><p>This is the ${section} page content.</p>`
+          );
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const wrapper = document.querySelector(".wrapper");
+        const loginLink = document.querySelector(".login-link");
+        const registerLink = document.querySelector(".register-link");
+        const btnPopup = document.querySelector(".btnLogin-popup");
+
+        registerLink.addEventListener("click", function () {
+          wrapper.classList.add("active");
+        });
+
+        loginLink.addEventListener("click", function () {
+          wrapper.classList.remove("active");
+        });
+
+        btnPopup.addEventListener("click", function () {
+          wrapper.classList.add("active-popup");
+        });
+      });
+    </script>
   </body>
 </html>
