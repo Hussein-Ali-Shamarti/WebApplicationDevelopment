@@ -102,77 +102,74 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px; /* Adjust size as needed */
+  font-size: 50px; 
   color: #000000;
-  /* Additional styling for your text */
 }
 
 .subtitle-text {
   position: absolute;
-  top: 60%; /* Adjust this value to position your subtitle correctly */
+  top: 60%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px; /* Adjust size as needed */
+  font-size: 20px; 
   color: #000000;
-  /* Additional styling for your subtitle text */
 }
 
 /*Service section */
 #our-services {
   padding: 50px 0;
   background-color: #f8f8f8;
-  position: relative; /* Needed for absolute positioning of arrows */
+  position: relative; 
+  overflow: hidden; 
 }
 
 #our-services .container {
   max-width: 1200px;
-  margin: 0 auto; /* Centers the container */
-  overflow: hidden; /* Hide the overflow */
+  margin: 0 auto; 
 }
 
 .services-wrapper {
-  overflow-x: auto; /* Allows for horizontal scrolling */
-  white-space: nowrap; /* Prevents wrapping of service cards */
+  overflow: hidden;
+  position: relative;
 }
 
 .services-slider {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   transition: transform 0.5s ease-in-out;
 }
 
 .service-card {
-  display: inline-block; /* Inline-block for horizontal layout */
-  width: calc(100% - 40px); /* Adjust the width as needed */
-  margin: 20px; /* Margin for spacing */
+  display: inline-block; 
+  flex: 1 1 calc(25% - 60px); 
+  margin: 20px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  flex-shrink: 0; /* Prevents the cards from shrinking */
-  /* Removed flex properties */
+  flex-shrink: 0; 
 }
 
 .service-image img {
   width: 100%;
-  height: auto; /* Adjust if you need a fixed height */
-  object-fit: cover; /* Ensures the image covers the area */
+  object-fit: cover; 
+  display: block;
 }
 
 .service-info {
   padding: 15px;
 }
 
-/* Rest of your styles remain unchanged */
-
-/* Arrow button styles */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #ffffff;
+  background-color: transparent; 
+  color: #161925; 
   border: none;
-  padding: 10px;
-  cursor: pointer;
-  /* Add more styles for arrows as needed */
+  padding: 0; 
+  font-size: 70px; 
+  z-index: 1000; 
 }
 
 .prev-arrow {
@@ -186,13 +183,13 @@ header {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .service-card {
-    width: calc(50% - 40px); /* 2 items per row */
+    width: calc(50% - 40px); 
   }
 }
 
 @media (max-width: 480px) {
   .service-card {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; 
   }
 }
 /*Service section */
