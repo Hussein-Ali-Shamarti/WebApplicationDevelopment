@@ -11,19 +11,22 @@
       <nav class="navigation">
         <a href="#" class="logo-container">
           <img
-            src="/public/assets/Pictures/CloudLogoTransaprent1.png"
+            src="/public/assets/Pictures/CloudSpaTransaprent.png"
             alt="imagelogo"
             class="logoo"
           />
         </a>
-        <a href="#">Services</a>
-        <a href="#">Treatments</a>
-        <a href="#">About us</a>
-        <a href="#">Contact us</a>
-        <a href="#">My page</a>
-        <button class="btnLogin-popup">Book Now</button>
+        <div class="nav-items">
+          <a href="#">Services</a>
+          <a href="#">Treatments</a>
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">My page</a>
+          <button class="btnLogin-popup">Book Now</button>
+        </div>
       </nav>
     </header>
+
     <div class="image-container">
       <img
         src="/public/assets/Pictures/homePage.jpg"
@@ -39,17 +42,19 @@
         <h2>Our Services</h2>
         <div class="services-wrapper">
           <div class="services-slider">
+            <!-- Service Card 1 -->
             <div class="service-card">
-              <div class="service-image">
+              <div class="service-image" data-title="Morning Awakening Spa">
                 <img
                   src="/public/assets/Pictures/morningAwakeningSpa.jpg"
                   alt="Morning Awakening Spa"
                 />
               </div>
               <div class="service-info">
-                <h3>Morning Awakening Spa</h3>
+                <h5 class="service-title">Morning Awakening Spa</h5>
                 <p class="service-time">
-                  From 07:00 to 11:00<br />16 years age restriction at the spa
+                  From 07:00 to 11:00<br />
+                  16 years age restriction at the spa
                 </p>
                 <p class="service-includes">
                   INCLUDED: Spa/gym access, breakfast, daily spa activities, tea
@@ -59,37 +64,41 @@
                 <button class="service-book-btn">Book now</button>
               </div>
             </div>
+
+            <!-- Service Card 2 -->
             <div class="service-card">
-              <div class="service-image">
+              <div class="service-image" data-title="Daytime Spa">
                 <img
                   src="/public/assets/Pictures/daytimeSpa.jpg"
                   alt="Daytime Spa"
                 />
               </div>
               <div class="service-info">
-                <h3>Daytime Spa</h3>
+                <!-- Additional info and 'Book now' button like in Service Card 1 -->
               </div>
             </div>
+            <!-- Service Card 3 -->
             <div class="service-card">
-              <div class="service-image">
+              <div class="service-image" data-title="Afternoon Spa">
                 <img
                   src="/public/assets/Pictures/afternoonSpa.jpg"
                   alt="Afternoon Spa"
                 />
               </div>
               <div class="service-info">
-                <h3>Afternoon Spa</h3>
+                <!-- Additional info and 'Book now' button like in Service Card 1 -->
               </div>
             </div>
+            <!-- Service Card 4 -->
             <div class="service-card">
-              <div class="service-image">
+              <div class="service-image" data-title="Evening Spa">
                 <img
                   src="/public/assets/Pictures/eveningSpa.jpg"
                   alt="Evening Spa"
                 />
               </div>
               <div class="service-info">
-                <h3>Evening Spa</h3>
+                <!-- Additional info and 'Book now' button like in Service Card 1 -->
               </div>
             </div>
             <!-- Repeat for other service cards if needed -->
@@ -97,6 +106,36 @@
         </div>
         <button class="arrow prev-arrow">&lt;</button>
         <button class="arrow next-arrow">&gt;</button>
+      </div>
+
+      <div class="read-more-container">
+        <button class="read-more-btn">Read more...</button>
+      </div>
+    </section>
+
+    <section id="extra-treatments">
+      <div class="container">
+        <h2>Extra Treatments</h2>
+        <div class="treatments-content">
+          <div class="treatment-image">
+            <img
+              src="/public/assets/Pictures/classicMassage.jpg"
+              alt="Classic Massage"
+            />
+          </div>
+          <div class="treatments-list">
+            <ul>
+              <li>Classic Massage</li>
+              <li>Massage and Scrub</li>
+              <li>Hot Stone Massage</li>
+              <li>Facial Treatment</li>
+              <li>Steam Room</li>
+            </ul>
+          </div>
+        </div>
+        <div class="read-more-container">
+          <button class="read-more-btn">Read more...</button>
+        </div>
       </div>
     </section>
 
