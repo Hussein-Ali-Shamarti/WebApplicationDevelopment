@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .about-us-block {
@@ -18,9 +18,9 @@
 float: right;
 width: 20%;
 height: auto;
-margin-bottom: 50px;
-margin-right: 20%;
-margin-top: 50px;
+margin-bottom: 10%;
+margin-right: 15%;
+margin-top: 5%;
 -webkit-box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
 -moz-box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
 box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
@@ -30,7 +30,8 @@ box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
 #about-us{
   width: 50%;
   padding: 100px;
-  margin-left: 50px;
+  margin-left: 10%;
+  margin-top: 5%;
   font-size: 24px;
   text-align: center;
   display: flex;
@@ -40,7 +41,7 @@ box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
 /* Header/title*/
 #about-us h1{
 text-align: left;
-padding: 10px;
+padding: 5px;
 }
 /* Paragraph*/
 .text-box p{
@@ -166,22 +167,6 @@ line-height: 1.6;
   margin-right: auto;
   padding: 100px;
 }
-@media screen and (max-width: 600px) {
-  .ourHistory-block img {
-    width: 100%;
-    height: auto;
-    display: none
-  }
-  .ourHistory-block #our-story p{
-    width: 100%;
-    height: auto;
-  }
-  #aboutUs {
-    width: 100%;
-    height: auto;
-    display: none
-  }
-}
 .awards{
   display: flex;
   background-color:#23395B; 
@@ -262,4 +247,27 @@ line-height: 1.6;
   font-weight: bold;
   margin: 0;
   font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .ourHistory-block img {
+    width: 25%;
+    margin-left: 50px;
+  }
+  .ourHistory-block #our-story p{
+    width: 100%;
+    height: auto;
+  }
+  #aboutUs {
+    width: 25%;
+    margin-left: 50px;
+  }
+  .awards-column img {
+    width: 25%;
+    margin-left: 50px;
+  }
+  #OpHours{
+    width: 25%;
+    margin-left: 50px;
+  }
 }
