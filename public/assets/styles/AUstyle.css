@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
 *{
   margin: 0;
   padding: 0;
@@ -70,11 +72,13 @@ line-height: 1.6;
   align-items: center;
   position: center;
   border-bottom: 1px solid black;
+  font-family: "Inter", sans-serif;
 }
 
 .story-header .title{
   font-size: 1.25rem;
   font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
 
 .story-header .close-button{
@@ -85,12 +89,14 @@ line-height: 1.6;
   color: black;
   font-size: 1rem;
   font-weight: bold;
+  
 }
 
 .story-body{
   padding: 10px 15px;
   line-height: 1.6;
   font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 
 #overlay{
@@ -122,6 +128,7 @@ line-height: 1.6;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Inter", sans-serif;
   
 }
 
@@ -137,8 +144,7 @@ line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
-  
-
+  font-family: "Inter", sans-serif;
 }
 .ourHistory-block #button{
   background-color: #8EA8C3;
@@ -234,7 +240,8 @@ line-height: 1.6;
   justify-content: center;
   align-items: center;
   margin-left: 15%;
-  font-family: 'Inter' sans-serif;
+  font-family: "Inter", sans-serif;
+  
 }
 .opening-text h1{
   color: white;
@@ -243,6 +250,7 @@ line-height: 1.6;
   font-size: 36px;
   max-width: 600px;
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
 .opening-text p, .opening-text .p1, .opening-text .p2, .opening-text .p3 {
   color: white;
@@ -253,4 +261,5 @@ line-height: 1.6;
   line-height: 2;
   font-weight: bold;
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
