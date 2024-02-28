@@ -129,7 +129,7 @@ header {
 
 #our-services {
   padding: 50px 0;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -147,13 +147,12 @@ header {
 .services-slider {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
   transition: transform 0.5s ease-in-out;
 }
 
 .service-card {
   display: inline-block;
-  flex: 0 0 calc(25% - 60px);
+  flex: 0 0 calc(25% - 30px);
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -178,7 +177,7 @@ header {
   left: 0;
   width: 100%;
   padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #23395b;
   color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -253,27 +252,46 @@ header {
   background: #b2dfdb;
 }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: #161925;
-  border: none;
-  padding: 0;
-  font-size: 70px;
-  z-index: 1000;
+.services-wrapper {
+  position: static;
 }
 
 .prev-arrow {
-  left: 10px;
+  position: absolute;
+  width: 63px;
+  height: 70px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(20px);
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  border: none;
 }
 
 .next-arrow {
-  right: 10px;
+  position: absolute;
+  width: 63px;
+  height: 70px;
+  top: 50%;
+  right: -140px;
+  transform: translateY(-50%) translateX(-160px);
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  border: none;
+}
+
+.prev-arrow img {
+  width: 40px;
+  height: auto;
+}
+
+.next-arrow img {
+  width: 40px;
+  height: auto;
 }
 
 .read-more-container {
+  align-self: flex-end;
   text-align: right;
   padding: 20px 50px;
 }
@@ -281,21 +299,31 @@ header {
 .read-more-btn {
   padding: 10px 20px;
   background-color: #8ea8c3;
-  color: #ffffff;
+  color: #000000;
   border: none;
   border-radius: 5px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  position: right;
 }
 
 .read-more-btn:hover {
   background-color: #1f2a48;
 }
 
-/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .service-card {
+    flex: 0 0 calc(25% - 40px);
+  }
+}
+
+@media (max-width: 992px) {
+  .service-card {
+    flex: 0 0 calc(33.33% - 40px);
+  }
+}
+
 @media (max-width: 768px) {
   .service-card {
     flex: 0 0 calc(50% - 40px);
@@ -304,54 +332,63 @@ header {
 
 @media (max-width: 480px) {
   .service-card {
-    flex: 0 0 100%;
+    flex: 0 0 calc(100% - 40px);
   }
 }
 /*Service section */
 
-/*<Extra Treatments section*/
-#extra-treatments .container h2 {
+/* Extra Treatments section */
+#extra-treatments .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 15px;
+  padding: 0 15px;
+}
+
+#extra-treatments .container h2 {
+  margin-bottom: 30px;
 }
 
 #extra-treatments .treatments-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  max-width: 1200px;
 }
 
 #extra-treatments .treatment-image {
-  flex-basis: 50%;
-  max-width: 50%;
+  position: relative;
+  width: 100%;
   padding: 0 15px;
+  box-sizing: border-box;
 }
 
 #extra-treatments .treatment-image img {
   width: 100%;
   height: auto;
-  border-radius: 0px;
   object-fit: cover;
 }
 
-#extra-treatments .treatments-list {
-  flex-basis: 50%;
-  max-width: 50%;
-  padding: 0 15px;
+#extra-treatments .treatment-image::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0px);
+  height: calc(90% + 40px);
+  left: -49px;
+  top: -15px;
+  background: #8ea8c3;
+  z-index: -1;
 }
 
 #extra-treatments .treatments-list ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 #extra-treatments .treatments-list ul li {
@@ -360,30 +397,124 @@ header {
   margin-bottom: 10px;
 }
 
-/*.read-more-container {
-  text-align: center; 
-  width: 100%; 
-  padding: 20px 0; 
+#extra-treatments .treatments-list ul li a {
+  text-decoration: none; /* No underline on links */
+  color: rgb(0, 0, 0); /* Dark color for text */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-.read-more-btn {
-  padding: 10px 20px;
-  background-color: #8ea8c3;
+#extra-treatments .treatments-list ul li a:hover,
+#extra-treatments .treatments-list ul li a:focus {
+  color: #8ea8c3; /* Highlight color when hovered or focused */
+}
+
+.read-more-container {
+  align-self: flex-end;
+  text-align: right;
+  padding: 20px 50px;
+}
+
+@media (min-width: 768px) {
+  #extra-treatments .treatments-content {
+    flex-direction: row;
+  }
+
+  #extra-treatments .treatment-image,
+  #extra-treatments .treatments-list {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  #extra-treatments .treatments-list ul {
+    text-align: left;
+  }
+}
+/* End of Extra Treatments section */
+
+/*about us */
+#about-us-section {
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  background-color: #8ea8c3; /* Adjust the color to match your design */
+  height: 710px;
+  padding: 60px 40px;
+  position: relative;
+  width: 100%;
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This will center the content vertically */
+  align-items: center; /* Keeps the picture and other elements centered */
+  max-width: 50%; /* Adjust max-width to center the content more */
+}
+
+.about-us-content h2,
+.about-us-content p {
   color: #ffffff;
-  border: none;
+  margin-bottom: 20px; /* Adjust as needed to space out the elements */
+  text-align: left; /* Align the text to the left */
+  font-family: "Inter";
+}
+
+.about-us-content h2 {
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.about-us-content p {
+  font-size: 30px;
+  line-height: 70px;
+  margin-top: 20px; /* Adjust as needed */
+  height: 240px;
+  width: 563px;
+  font-weight: 300; /* This will make the font lighter, assuming the font supports this weight */
+}
+
+.read-more-button-for-about-us {
+  align-self: flex-start; /* This aligns the button to the left */
+  padding: 10px 20px; /* Adjust padding as necessary */
+  background-color: #cbf7ed;
+  color: #000;
+  text-decoration: none;
   border-radius: 5px;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  margin-top: -20px; /* Adjust this value to move the button closer to the paragraph above it */
+}
+.about-us-image {
+  width: 550px; /* Adjusted to half of the original width */
+  height: 890px; /* Adjusted to half of the original height */
+  margin-bottom: 70px; /* Adjust this value as needed to make the picture stick out the right amount */
+  margin-top: 70px;
 }
 
-.read-more-btn:hover {
-  background-color: #1f2a48;
+.about-us-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-/*<extra treatments section*/
+@media screen and (max-width: 768px) {
+  #about-us-section {
+    flex-direction: column;
+  }
 
+  .about-us-content,
+  .about-us-image {
+    max-width: 100%;
+  }
+
+  .about-us-content {
+    order: 1; /* ensures content is before the image */
+  }
+
+  .about-us-image {
+    order: 2; /* ensures image is after the content */
+  }
+}
+
+/*
 .wrapper {
   position: relative;
   width: 400px;
@@ -549,3 +680,4 @@ header {
 .login-register p a:hover {
   text-decoration: underline;
 }
+*/

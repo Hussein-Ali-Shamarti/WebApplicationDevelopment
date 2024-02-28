@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/assets/styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Cloud Spa</title>
   </head>
   <body>
@@ -26,6 +27,7 @@
         </div>
       </nav>
     </header>
+    
 
     <div class="image-container">
       <img
@@ -74,8 +76,18 @@
                 />
               </div>
               <div class="service-info">
-                <!-- Additional info and 'Book now' button like in Service Card 1 -->
-              </div>
+                <h5 class="service-title">Daytime Spa</h5>
+                <p class="service-time">
+                  From 10:00 to 15:00<br />
+                  16 years age restriction at the spa
+                </p>
+                <p class="service-includes">
+                  INCLUDED: Spa/gym access, lunch, daily spa activities, tea
+                  & water, complimentary use of bathrobe and slippers.
+                </p>
+                <p class="service-price">Just for 500kr</p>
+                <button class="service-book-btn">Book now</button>
+            </div>
             </div>
             <!-- Service Card 3 -->
             <div class="service-card">
@@ -86,7 +98,17 @@
                 />
               </div>
               <div class="service-info">
-                <!-- Additional info and 'Book now' button like in Service Card 1 -->
+                <h5 class="service-title">Afternoon Spa</h5>
+                <p class="service-time">
+                  From 14:00 to 18:00<br />
+                  16 years age restriction at the spa
+                </p>
+                <p class="service-includes">
+                  INCLUDED: Spa/gym access, dinner, daily spa activities, tea
+                  & water, complimentary use of bathrobe and slippers.
+                </p>
+                <p class="service-price">Just for 500kr</p>
+                <button class="service-book-btn">Book now</button>
               </div>
             </div>
             <!-- Service Card 4 -->
@@ -98,14 +120,51 @@
                 />
               </div>
               <div class="service-info">
-                <!-- Additional info and 'Book now' button like in Service Card 1 -->
+                <h5 class="service-title">Evening Spa</h5>
+                <p class="service-time">
+                  From 14:00 to 18:00<br />
+                  16 years age restriction at the spa
+                </p>
+                <p class="service-includes">
+                  INCLUDED: Spa/gym access, snacks, daily spa activities, tea
+                  & water, complimentary use of bathrobe and slippers.
+                </p>
+                <p class="service-price">Just for 500kr</p>
+                <button class="service-book-btn">Book now</button>
               </div>
-            </div>
-            <!-- Repeat for other service cards if needed -->
-          </div>
         </div>
-        <button class="arrow prev-arrow">&lt;</button>
-        <button class="arrow next-arrow">&gt;</button>
+                    <!-- Service Card 5 -->
+                    <div class="service-card">
+                      <div class="service-image" data-title="Night Spa">
+                        <img
+                          src="/public/assets/Pictures/booking1.jpg"
+                          alt="Night Spa"
+                        />
+                      </div>
+                      <div class="service-info">
+                        <h5 class="service-title">Night Spa</h5>
+                        <p class="service-time">
+                          From 14:00 to 18:00<br />
+                          16 years age restriction at the spa
+                        </p>
+                        <p class="service-includes">
+                          INCLUDED: Spa/gym access, snacks, daily spa activities, tea
+                          & water, complimentary use of bathrobe and slippers.
+                        </p>
+                        <p class="service-price">Just for 500kr</p>
+                        <button class="service-book-btn">Book now</button>
+                      </div>
+                </div>
+      </div>
+        <!-- Previous arrow -->
+        <button class="prev-arrow">
+          <img src="assets/Pictures/arrowsleft.jpg" alt="Previous" />
+        </button>
+
+        <!-- Next arrow -->
+        <button class="next-arrow">
+          <img src="assets/Pictures/arrows.jpg" alt="Next" />
+        </button>
       </div>
 
       <div class="read-more-container">
@@ -125,11 +184,11 @@
           </div>
           <div class="treatments-list">
             <ul>
-              <li>Classic Massage</li>
-              <li>Massage and Scrub</li>
-              <li>Hot Stone Massage</li>
-              <li>Facial Treatment</li>
-              <li>Steam Room</li>
+              <li><a href="/classic-massage">Classic Massage</a></li>
+              <li><a href="/massage-and-scrub">Massage and Scrub</a></li>
+              <li><a href="/hot-stone-massage">Hot Stone Massage</a></li>
+              <li><a href="/facial-treatment">Facial Treatment</a></li>
+              <li><a href="/steam-room">Steam Room</a></li>
             </ul>
           </div>
         </div>
@@ -138,6 +197,25 @@
         </div>
       </div>
     </section>
+<section>
+  <br>
+  <br>
+<br>
+<br>
+</section>
+    <section>
+      <div id="about-us-section">
+        <div class="about-us-content">
+          <h2>About Us</h2>
+          <p>Our expert therapists provide personalized experiences for your relaxation needs.</p>
+          <a href="link-to-more-information.html" class="read-more-button-for-about-us">Read more...</a>
+        </div>
+        <div class="about-us-image">
+          <img src="assets/Pictures/aboutUs.jpg" alt="Hands holding a flower">
+        </div>
+      </div>
+    </section>
+    
 
     <!-- 
     <div class="wrapper">

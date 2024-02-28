@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.classList.add("active-popup");
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.querySelector(".services-slider");
   var nextButton = document.querySelector(".next-arrow");
@@ -28,11 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
     var cardWidth = slider.querySelector(".service-card").clientWidth; // Width of a service card
     var newTransformValue = -(cardWidth * index);
     slider.style.transform = "translateX(" + newTransformValue + "px)";
+    
+    // Loop back to beginning when reaching the third-to-last service
+    if (currentIndex === totalCards - 1) {
+      currentIndex = 0;
+    } else if (currentIndex === totalCards - 2) {
+      currentIndex = 1;
+    }
   }
 
   nextButton.addEventListener("click", function () {
-    if (currentIndex < totalCards - 1) {
+    if (currentIndex < totalCards - 3) {
       currentIndex++;
+      scrollSlider(currentIndex);
+    } else {
+      currentIndex = 0; // Reset currentIndex to 0
       scrollSlider(currentIndex);
     }
   });
@@ -44,3 +53,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
