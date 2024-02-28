@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="Public/Assets/styles/AUstyle.css" rel="stylesheet" />
     <title>Cloud Spa</title>
-    <link href="public/assets/styles/AUstyle.css" rel="stylesheet" />
 </head>
-<body>
-    
-    <div id="about-us">
+<body>   
+    <!-- About Us Section-->
+      <div class="about-us-block">
+        <img src="aboutUs.jpg" id="aboutUs" alt="Holding flowers">
+        <div id="about-us">
         <h1>About us</h1>
-        <p>Welcome to Cloud Spa, where tranquility meets innovation. Established in 2004, we step into luxury with award-winning treatments tailored uniquely to you and your requirements. Our expert therapists offer personalized experiences tailored by your relaxation needs. Step into our oasis in the clouds and embark on a journey of bliss.</p>
-        
+        <div class="text-box">
+            <p>Welcome to Cloud Spa, where tranquility meets innovation. Established in 2004, we step into luxury with award-winning
+                treatments tailored uniquely to you and your requirements. Our expert therapists offer personalized experiences
+                tailored by your relaxation needs. Step into our oasis in the clouds and embark on a journey of bliss.</p>
+            </div> 
+          
     </div>
-
-
+    <!-- Our Story Section -->
     <div class="ourHistory-block">
-        <img src="public/assets/Pictures/ourHistory.jpg" id="historypic" alt="Opening a book">
+        <img src="ourHistory.jpg" id="historypic" alt="Opening a book">
         <div id="our-story">
         <h1>Our story</h1>
         <div class="text-and-button">
@@ -36,6 +43,30 @@
         <div id="overlay"></div>
     </div>
 </div>
-    <script src="AboutUs.js"></script>    
+    <script src="src/AboutUs.js"></script>    
+
+    <!-- Our Awards Section -->
+    <div id="our-awards">
+        <div class="awards">
+            <div class="awards-column">
+                <h1>Our Awards</h1>
+                <img src="spaAwards1.jpg" id="Award1"alt="First award">
+                <img src="spaAwards2.png" id="Award2"alt="Second award">
+                <img src="spaAwards3.png" id="Award3"alt="Third award">
+            </div>
+            </div>
+    </div>
+
+    <!-- Opening Hours Section -->
+    <div class="opening-hours" id="opening-hours">
+        <img src="openingHours.jpg" id="OpHours" alt="Pink flowers">
+        <div class="opening-text">
+        <h1>Opening hours</h1>
+            <p>Weekdays:</p><br>
+            <p1 class="p1">Monday - Friday 08:00-22:00 </p1><br>
+            <p2 class="p2">Weekends:</p2><br>
+            <p3 class="p3">Saturday - Sunday 10:00-23:00</p3><br>
+        </div>
+    </div>
 </body>
 </html>
