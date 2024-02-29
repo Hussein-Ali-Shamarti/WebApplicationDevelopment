@@ -4,9 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
-
 
 body, h1, h2, p, a, input, textarea, button {
     font-family: 'Inter', sans-serif;
@@ -19,19 +18,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.1px 100px;
+  padding: 0.5px 50px;
   background: #23395b;
   display: flex;
   justify-content: space-between;
-  z-index: 99;
 }
-
-main {
-  padding-top: 80px; 
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
   
   /* Utility classes for spacing */
   .padding-20 {
@@ -44,7 +35,7 @@ main {
   
   /* Main contact sections */
   main {
-    padding: 60px 20px; /* Added padding to the top to avoid overlap with the fixed header */
+    padding: 85px 20px; /* Added padding to the top to avoid overlap with the fixed header */
   }
   
   #contact-info,
@@ -54,13 +45,13 @@ main {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(213, 33, 33, 0.1);
   }
   
   #contact-info h1,
   #opening-hours h2,
   #contact-form h2 {
-    color: #23395b;
+    color: #000000;
     margin-bottom: 20px;
   }
   
@@ -73,28 +64,10 @@ main {
   
   /* Contact info links styling */
   #contact-info a {
-    color: #cbf7ed;
-    text-decoration: none;
+    color: #8EA8C3;
+    text-decoration: none; /* kan fjernes hvis man ønsker strek under linkene */
   }
   
-  /* Contact form styling */
-  #contact-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #contact-form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  #contact-form input,
-  #contact-form textarea {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
   
   #contact-form button {
     padding: 10px;
@@ -103,25 +76,34 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
   }
   
-  #contact-form button:hover {
-    background-color: #b2dfdb;
+  #contact-form {
+    background-color: #406E8E; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
 
-  #contact-info {
-    background-image: url('/path-to-contact-info-background-image.jpg');
-    background-size: cover;
-    background-position: center;
+
+  #contact-form input,
+  #contact-form textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc; /* Grensefarge */
+    border-radius: 4px; /* Avrundede hjørner */
+    background-color: #D9D9D9; /* Lys grå bakgrunnsfarge */
+    color: #010101; /* Tekstfarge */
+    font-size: 14px; /* Størrelse på tekst */
+  }
+
+  
+  #contact-form label {
+    color: #FFFFFF; /* Farge for label-tekster */
+    margin-bottom: 5px;
+    display: block;
   }
   
-  #opening-hours {
-    background-image: url('public/assets/Pictures/openingHours.jpg');
-    background-size: cover;
-    background-position: center;
-  }
 
   /* Responsive design */
   @media (min-width: 768px) {
@@ -135,6 +117,7 @@ main {
       grid-column: 1 / span 2; /* Contact form spans across both columns */
     }
   }
+
 
 .logo-container {
   margin-right: auto;
@@ -162,7 +145,6 @@ main {
   }
   
   .navigation a::after {
-    content: "";
     position: absolute;
     left: 0;
     bottom: -6px;
