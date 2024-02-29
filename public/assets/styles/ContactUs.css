@@ -23,6 +23,8 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+
   
   /* Utility classes for spacing */
   .padding-20 {
