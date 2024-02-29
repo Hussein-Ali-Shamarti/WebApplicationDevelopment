@@ -18,9 +18,9 @@
 float: right;
 width: 20%;
 height: auto;
-margin-bottom: 10%;
+margin-bottom: 5%;
 margin-right: 15%;
-margin-top: 5%;
+margin-top: 10%;
 -webkit-box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
 -moz-box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
 box-shadow: 44px -36px 0px 3px rgba(142,168,195,1);
@@ -245,7 +245,7 @@ line-height: 1.6;
   font-family: "Inter", sans-serif;
 }
 
-@media (max-width: 601px) {
+@media (max-width: 600px) {
   
   #aboutUs {
     display: none;
@@ -277,10 +277,13 @@ line-height: 1.6;
     width: 25%;
   }
   .opening-text h1{
-    font-size: 1.6em
+    font-size: 1.6em;
+    padding-right: 35%;
   }
   .opening-text p, .opening-text .p1, .opening-text .p2, .opening-text .p3{
     font-size: 1.2em;
+    text-align: center;
+    padding-right: 35%;
   }
   #OpHours {
     display: none;
