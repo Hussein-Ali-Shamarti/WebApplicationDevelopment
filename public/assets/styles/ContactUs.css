@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body, h1, h2, p, a, input, textarea, button {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.1px 100px;
+  background: #23395b;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+main {
+  padding-top: 80px; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  
+  /* Utility classes for spacing */
+  .padding-20 {
+    padding: 20px;
+  }
+  
+  .margin-bottom-16 {
+    margin-bottom: 16px;
+  }
+  
+  /* Main contact sections */
+  main {
+    padding: 60px 20px; /* Added padding to the top to avoid overlap with the fixed header */
+  }
+  
+  #contact-info,
+  #opening-hours,
+  #contact-form {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact-info h1,
+  #opening-hours h2,
+  #contact-form h2 {
+    color: #23395b;
+    margin-bottom: 20px;
+  }
+  
+  #contact-info p,
+  #opening-hours p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact info links styling */
+  #contact-info a {
+    color: #cbf7ed;
+    text-decoration: none;
+  }
+  
+  /* Contact form styling */
+  #contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #contact-form button {
+    padding: 10px;
+    background-color: #cbf7ed;
+    color: #23395b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #contact-form button:hover {
+    background-color: #b2dfdb;
+  }
+  
+
+  #contact-info {
+    background-image: url('/path-to-contact-info-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #opening-hours {
+    background-image: url('public/assets/Pictures/openingHours.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Responsive design */
+  @media (min-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  
+    #contact-form {
+      grid-column: 1 / span 2; /* Contact form spans across both columns */
+    }
+  }
+
+.logo-container {
+  margin-right: auto;
+}
+
+.logoo {
+  color: rgb(253, 254, 254);
+  height: 90px;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navigation a {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 40px;
+    position: relative;
+  }
+  
+  .navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #cbf7ed;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  
+  .navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  .navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: #cbf7ed;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+  }
+  
+
+  
