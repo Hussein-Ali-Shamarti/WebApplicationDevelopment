@@ -376,9 +376,9 @@ header {
 #extra-treatments .treatment-image::before {
   content: "";
   position: absolute;
-  width: calc(100% + 0px);
-  height: calc(90% + 40px);
-  left: -49px;
+  width: calc(90% + 10px);
+  height: calc(90% + 10px);
+  left: -4px;
   top: -15px;
   background: #8ea8c3;
   z-index: -1;
@@ -437,10 +437,11 @@ header {
   justify-content: flex-end; /* Align content to the right */
   align-items: center;
   background-color: #8ea8c3; /* Adjust the color to match your design */
-  height: 710px;
-  padding: 60px 40px;
+  height: 790px;
+  padding: 40px 90px;
   position: relative;
   width: 100%;
+  overflow: visible;
 }
 
 .about-us-content {
@@ -484,9 +485,6 @@ header {
 }
 .about-us-image {
   width: 550px; /* Adjusted to half of the original width */
-  height: 890px; /* Adjusted to half of the original height */
-  margin-bottom: 70px; /* Adjust this value as needed to make the picture stick out the right amount */
-  margin-top: 70px;
 }
 
 .about-us-image img {
@@ -511,6 +509,136 @@ header {
 
   .about-us-image {
     order: 2; /* ensures image is after the content */
+  }
+}
+
+/*Event Calendar*/
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  background: #cbf7ed;
+  border-radius: 16px;
+  padding: 16px;
+  width: 715px;
+  margin: 50px auto 0; /* Centered horizontally */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  margin: 0; /* Centers the title when arrows are absolutely positioned */
+}
+
+/* Position the arrows in the top-right corner */
+.arrows {
+  position: absolute;
+  right: 16px; /* Adjust as needed for exact positioning */
+  top: 16px; /* Adjust as needed for exact positioning */
+  display: flex;
+  align-items: center; /* Align arrows vertically */
+}
+
+.arrow {
+  cursor: pointer;
+  margin-left: 8px; /* Space between arrows */
+}
+
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Creates a 7 column grid */
+  gap: 1px; /* 1px for the visual separation of grid items */
+  align-items: center;
+}
+
+.weekdays div,
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  background: #cbf7ed;
+  border: px solid #d5d4df;
+}
+
+.day {
+  background: #ffffff; /* White background for days */
+}
+
+#valentines-day {
+  position: relative;
+  font-weight: 600; /* Make the number bold */
+  color: black; /* Set the color for the number */
+}
+
+#valentines-day .heart {
+  position: absolute;
+  content: "\2665";
+  font-size: 3em; /* Adjust the size of the heart as needed */
+  line-height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  -webkit-text-stroke: 1px black; /* Create the outline effect */
+}
+
+.inactive {
+  background: #f2f3f7;
+  color: #a8a8a8;
+}
+
+.event-description {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.event-description h3 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.event-description p {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    width: calc(100% - 32px); /* Responsive width with padding */
+    padding: 16px; /* Smaller padding on smaller screens */
+  }
+
+  .arrow {
+    position: static;
+    transform: none;
+    margin: 0 8px; /* Spacing around arrows when not absolutely positioned */
+  }
+
+  .calendar-header {
+    flex-direction: column; /* Stack the header items on smaller screens */
+  }
+
+  .calendar-header h2 {
+    order: -1; /* Title above arrows on smaller screens */
+  }
+
+  .weekdays,
+  .days {
+    gap: 0.5px; /* Smaller gap on smaller screens */
   }
 }
 

@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var cardWidth = slider.querySelector(".service-card").clientWidth; // Width of a service card
     var newTransformValue = -(cardWidth * index);
     slider.style.transform = "translateX(" + newTransformValue + "px)";
-    
+
     // Loop back to beginning when reaching the third-to-last service
     if (currentIndex === totalCards - 1) {
       currentIndex = 0;
@@ -53,4 +53,77 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const monthYearTitle = document.getElementById("month-year");
+  const prevMonthArrow = document.getElementById("prev-month");
+  const nextMonthArrow = document.getElementById("next-month");
+  const daysGrid = document.getElementById("days-grid");
 
+  let currentDate = new Date();
+
+  function generateCalendar(date) {
+    daysGrid.innerHTML = "";
+    monthYearTitle.textContent = date.toLocaleDateString("default", {
+      month: "long",
+      year: "numeric"
+    });
+
+    const firstDayOfMonth = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      1
+    ).getDay();
+    const lastDayOfPreviousMonth = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      0
+    ).getDate();
+    const lastDayOfMonth = new Date(
+      date.getFullYear(),
+      date.getMonth() + 1,
+      0
+    ).getDate();
+
+    // Adjust for Sunday
+    const adjustedFirstDayOfMonth = firstDayOfMonth === 0 ? 7 : firstDayOfMonth;
+
+    // Fill in the days from the previous month
+    for (let i = 0; i < adjustedFirstDayOfMonth - 1; i++) {
+      daysGrid.innerHTML += `<div class="day inactive">${
+        lastDayOfPreviousMonth - adjustedFirstDayOfMonth + i + 2
+      }</div>`;
+    }
+
+    // Fill in the days of the current month
+    for (let i = 1; i <= lastDayOfMonth; i++) {
+      if (i === 14) {
+        // Check if it's Valentine's Day
+        daysGrid.innerHTML += `<div class="day special" id="valentines-day">${i} <span class="heart">&#10084;</span></div>`;
+      } else {
+        daysGrid.innerHTML += `<div class="day">${i}</div>`;
+      }
+    }
+
+    // Fill in the days of the next month
+    let daysToAddForNextMonth = 7 - (daysGrid.children.length % 7);
+    if (daysToAddForNextMonth && daysToAddForNextMonth < 7) {
+      for (let i = 1; i <= daysToAddForNextMonth; i++) {
+        daysGrid.innerHTML += `<div class="day inactive">${i}</div>`;
+      }
+    }
+  }
+
+  // Event listeners for previous and next arrows
+  prevMonthArrow.addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    generateCalendar(currentDate);
+  });
+
+  nextMonthArrow.addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    generateCalendar(currentDate);
+  });
+
+  // Initially generate the calendar
+  generateCalendar(currentDate);
+});
