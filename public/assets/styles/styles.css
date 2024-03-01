@@ -16,81 +16,6 @@ body {
   background-position: center;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.1px 100px;
-  background: #23395b;
-  display: flex;
-  justify-content: space-between;
-  z-index: 99;
-}
-
-.logo-container {
-  margin-right: auto;
-}
-
-.logoo {
-  color: rgb(253, 254, 254);
-  height: 90px;
-}
-
-.navigation {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.navigation a {
-  font-size: 1.1em;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: 300;
-  margin-left: 40px;
-  position: relative;
-}
-
-.navigation a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 3px;
-  background: #cbf7ed;
-  border-radius: 5px;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.5s;
-}
-
-.navigation a:hover::after {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
-.navigation .btnLogin-popup {
-  width: 130px;
-  height: 50px;
-  background: #cbf7ed;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1em;
-  color: #000000;
-  font-weight: 500;
-  margin-left: 40px;
-  transition: 0.5s;
-}
-
-.navigation .btnLogin-popup:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
-
 .image-container {
   position: relative;
   text-align: center;
@@ -124,19 +49,24 @@ header {
 /*Service section */
 
 .container h2 {
-  text-align: center;
+  margin-top: 0; /* No top margin to stick to the top of the container */
+  padding-top: 20px; /* Some padding at the top, adjust as needed */
+  font-weight: 300;
+  text-align: center; /* Ensure the heading is centered */
 }
 
 #our-services {
-  padding: 50px 0;
+  padding: 50px 0; /* Adjust padding to suit your design */
   background-color: #ffffff;
   position: relative;
   overflow: hidden;
 }
 
 #our-services .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Full width of the parent */
+  max-width: 1200px; /* Maximum width of the content, centered */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center text within the container */
 }
 
 .services-wrapper {
@@ -152,7 +82,7 @@ header {
 
 .service-card {
   display: inline-block;
-  flex: 0 0 calc(25% - 30px);
+  flex: 0 0 calc(30% - 30px);
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -296,6 +226,12 @@ header {
   padding: 20px 50px;
 }
 
+.container h3 {
+  align-items: center;
+  top: 50%;
+  left: 50%;
+}
+
 .read-more-btn {
   padding: 10px 20px;
   background-color: #8ea8c3;
@@ -414,6 +350,22 @@ header {
   padding: 20px 50px;
 }
 
+.read-more-btn-for-extra-treatments {
+  padding: 10px 20px;
+  background-color: #8ea8c3;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.read-more-btn-for-extra-treatments:hover {
+  background-color: #1f2a48;
+}
+
 @media (min-width: 768px) {
   #extra-treatments .treatments-content {
     flex-direction: row;
@@ -477,11 +429,12 @@ header {
 .read-more-button-for-about-us {
   align-self: flex-start; /* This aligns the button to the left */
   padding: 10px 20px; /* Adjust padding as necessary */
-  background-color: #cbf7ed;
   color: #000;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: -20px; /* Adjust this value to move the button closer to the paragraph above it */
+  margin-top: -20px;
+  background-color: #cbf7ed;
+  /* Adjust this value to move the button closer to the paragraph above it */
 }
 .about-us-image {
   width: 550px; /* Adjusted to half of the original width */
@@ -513,31 +466,39 @@ header {
 }
 
 /*Event Calendar*/
+.container {
+  /* display: flex; This will place child elements side-by-side */
+  justify-content: space-between; /* This will put space between the two children if there's extra space */
+  align-items: flex-start; /* This aligns children at the top of the container */
+  padding-top: 110px;
+}
+
 .calendar-container {
   display: flex;
   flex-direction: column;
   background: #cbf7ed;
   border-radius: 16px;
-  padding: 16px;
-  width: 715px;
-  margin: 50px auto 0; /* Centered horizontally */
+  padding: 50px;
+  width: 755px;
+  margin: 90px auto 0px 20px; /* Top, Right, Bottom, Left */
   box-sizing: border-box;
-  position: relative;
+  position: relative; /* keep relative for positioning of children */
 }
 
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 6px;
+}
+.calendarTitle{
+  font-size: 44px;
+  top: 3972px;
 }
 
-.calendar-header h2 {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
+.calendar-header #month-year {
   font-size: 24px;
-  color: #000000;
-  text-align: center;
-  margin: 0; /* Centers the title when arrows are absolutely positioned */
+  
 }
 
 /* Position the arrows in the top-right corner */
@@ -549,43 +510,50 @@ header {
   align-items: center; /* Align arrows vertically */
 }
 
-.arrow {
-  cursor: pointer;
-  margin-left: 8px; /* Space between arrows */
+/* Adjust margin to the left arrow for less spacing */
+.arrow.left {
+  margin-right: 20px; /* Reduced the spacing */
 }
 
 .weekdays,
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* Creates a 7 column grid */
-  gap: 1px; /* 1px for the visual separation of grid items */
+  gap: 0.1px; /* 1px for the visual separation of grid items */
+  align-items: center;
+  padding: 15px 190px 10px 0px;
+}
+
+.weekdays div {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.weekdays div,
 .day {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 64px;
   height: 64px;
   background: #cbf7ed;
-  border: px solid #d5d4df;
+  border: 0.1px solid #d5d4df;
 }
 
 .day {
-  background: #ffffff; /* White background for days */
+  background: #cbf7ed; /* White background for days */
 }
 
 #valentines-day {
   position: relative;
-  font-weight: 600; /* Make the number bold */
+  font-weight: 400; /* Make the number bold */
   color: black; /* Set the color for the number */
 }
 
 #valentines-day .heart {
   position: absolute;
   content: "\2665";
-  font-size: 3em; /* Adjust the size of the heart as needed */
+  font-size: 4em; /* Adjust the size of the heart as needed */
   line-height: 0;
   top: 50%;
   left: 50%;
@@ -600,20 +568,44 @@ header {
 }
 
 .event-description {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
-  margin-top: 30px;
-  font-family: "Inter", sans-serif;
+  width: 459px;
+  height: 219px;
+  left: 963px;
+  top: 3607px;
+  margin-top: 160px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+
+  color: #000000;
 }
 
 .event-description h3 {
-  font-weight: 600;
-  margin-bottom: 12px;
+  position: absolute;
+  width: 378px;
+  height: 58px;
+  left: 524px;
+  top: 3040px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+
+  color: #000000;
 }
 
 .event-description p {
-  font-weight: 400;
+  font-weight: 300;
+  position: absolute;
+  width: 345px;
+  height: 219px;
+  left: 863px;
+  top: 3555px;
 }
 
 @media screen and (max-width: 768px) {
@@ -623,7 +615,7 @@ header {
   }
 
   .arrow {
-    position: static;
+    position: absolute;
     transform: none;
     margin: 0 8px; /* Spacing around arrows when not absolutely positioned */
   }
@@ -641,7 +633,6 @@ header {
     gap: 0.5px; /* Smaller gap on smaller screens */
   }
 }
-
 /*
 .wrapper {
   position: relative;

@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const monthYearTitle = document.getElementById("month-year");
   const prevMonthArrow = document.getElementById("prev-month");
@@ -63,10 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCalendar(date) {
     daysGrid.innerHTML = "";
-    monthYearTitle.textContent = date.toLocaleDateString("default", {
-      month: "long",
-      year: "numeric"
-    });
+    // Capitalize the first letter of the month and concatenate the year
+    const monthName = date.toLocaleDateString("default", { month: "long" });
+    const year = date.toLocaleDateString("default", { year: "numeric" });
+    monthYearTitle.textContent =
+      monthName.charAt(0).toUpperCase() + monthName.slice(1) + " " + year;
 
     const firstDayOfMonth = new Date(
       date.getFullYear(),
@@ -96,8 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fill in the days of the current month
     for (let i = 1; i <= lastDayOfMonth; i++) {
-      if (i === 14) {
-        // Check if it's Valentine's Day
+      // Add a heart only on February 14th
+      const isFebruary = date.getMonth() === 1;
+      const isFourteenth = i === 14;
+      if (isFebruary && isFourteenth) {
         daysGrid.innerHTML += `<div class="day special" id="valentines-day">${i} <span class="heart">&#10084;</span></div>`;
       } else {
         daysGrid.innerHTML += `<div class="day">${i}</div>`;

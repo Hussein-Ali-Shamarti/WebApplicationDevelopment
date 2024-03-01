@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/assets/styles/styles.css" />
+    <link rel="stylesheet" href="../public/assets/styles/styles.css" />
+    <link rel="stylesheet" href="headerfooter.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Cloud Spa</title>
   </head>
@@ -12,7 +13,7 @@
       <nav class="navigation">
         <a href="#" class="logo-container">
           <img
-            src="/public/assets/Pictures/CloudSpaTransaprent.png"
+            src="../public/assets/Pictures/CloudSpaTransparent.png"
             alt="imagelogo"
             class="logoo"
           />
@@ -20,8 +21,8 @@
         <div class="nav-items">
           <a href="#">Services</a>
           <a href="#">Treatments</a>
-          <a href="#">About us</a>
-          <a href="#">Contact us</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="ContactUs.html">Contact us</a>
           <a href="#">My page</a>
           <button class="btnLogin-popup">Book Now</button>
         </div>
@@ -31,7 +32,7 @@
 
     <div class="image-container">
       <img
-        src="/public/assets/Pictures/homePage.jpg"
+        src="../public/assets/Pictures/homePage.jpg"
         alt="Cloud Spa"
         class="background-image"
       />
@@ -48,7 +49,7 @@
             <div class="service-card">
               <div class="service-image" data-title="Morning Awakening Spa">
                 <img
-                  src="/public/assets/Pictures/morningAwakeningSpa.jpg"
+                  src="../public/assets/Pictures/morningAwakeningSpa.jpg"
                   alt="Morning Awakening Spa"
                 />
               </div>
@@ -71,7 +72,7 @@
             <div class="service-card">
               <div class="service-image" data-title="Daytime Spa">
                 <img
-                  src="/public/assets/Pictures/daytimeSpa.jpg"
+                  src="../public/assets/Pictures/daytimeSpa.jpg"
                   alt="Daytime Spa"
                 />
               </div>
@@ -93,7 +94,7 @@
             <div class="service-card">
               <div class="service-image" data-title="Afternoon Spa">
                 <img
-                  src="/public/assets/Pictures/afternoonSpa.jpg"
+                  src="../public/assets/Pictures/afternoonSpa.jpg"
                   alt="Afternoon Spa"
                 />
               </div>
@@ -115,7 +116,7 @@
             <div class="service-card">
               <div class="service-image" data-title="Evening Spa">
                 <img
-                  src="/public/assets/Pictures/eveningSpa.jpg"
+                  src="../public/assets/Pictures/eveningSpa.jpg"
                   alt="Evening Spa"
                 />
               </div>
@@ -137,7 +138,7 @@
                     <div class="service-card">
                       <div class="service-image" data-title="Night Spa">
                         <img
-                          src="/public/assets/Pictures/booking1.jpg"
+                          src="../public/assets/Pictures/booking1.jpg"
                           alt="Night Spa"
                         />
                       </div>
@@ -178,7 +179,7 @@
         <div class="treatments-content">
           <div class="treatment-image">
             <img
-              src="/public/assets/Pictures/classicMassage.jpg"
+              src="../public/assets/Pictures/classicMassage.jpg"
               alt="Classic Massage"
             />
           </div>
@@ -193,7 +194,7 @@
           </div>
         </div>
         <div class="read-more-container">
-          <button class="read-more-btn">Read more...</button>
+          <button class="read-more-btn-for-extra-treatments">Read more...</button>
         </div>
       </div>
     </section>
@@ -216,14 +217,19 @@
       </div>
     </section>
     
-    <section>
+    <section class="container">
+      <div>
+        <h2 class="calendarTitle">Event Calendar</h2>
       <div class="calendar-container">
           <div class="calendar-header">
+            <h5 id="month-year">February 2024</h2>
+            <div class="arrows-container">
               <span class="arrow left" id="prev-month">&lt;</span>
-              <h2 id="month-year">February 2024</h2>
               <span class="arrow right" id="next-month">&gt;</span>
           </div>
-          <div class="weekdays">
+        </div>
+
+        <div class="weekdays">
               <div>Mo</div>
               <div>Tu</div>
               <div>We</div>
@@ -232,14 +238,15 @@
               <div>Sa</div>
               <div>Su</div>
           </div>
+          
           <div id="days-grid" class="days">
             <div class="day special" id="valentines-day">14 <span class="heart">&#10084;</span></div>
           </div>
       </div>
       <div class="event-description">
-          <h3>Event Calendar</h3>
-          <p>Explore our Event Calendar for a glimpse into the exciting happenings at Cloud Spa. From rejuvenating workshops to exclusive offers and seasonal specials. Stay tuned for updates on upcoming events!</p>
-      </div>
+        <p>Explore our Event Calendar for a glimpse into the exciting happenings at Cloud Spa. From rejuvenating workshops to exclusive offers and seasonal specials. Stay tuned for updates on upcoming events!</p>
+    </div>
+    </div>
   </section>
 
     <!-- 
@@ -333,8 +340,37 @@
       </div>
       <p>&copy; 2024 Spa Studio</p>
     </footer> -->
-
-    <script src="/src/script.js"></script>
+    <br><br><br><br>
+    <section>
+    <footer class="footer">
+      <div class="footer-content">
+        <img src="../public/assets/Pictures/CloudSpaTransaprent.png" alt="Cloud Spa Logo" class="footer-logo"/>
+        <nav class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#treatments">Treatments</a>
+          <a href="#about">About us</a>
+          <a href="#contact">Contact us</a>
+          <a href="#mypage">My Page</a>
+        </nav>
+        <div class="footer-block">
+          <h3>Opening hours:</h3>
+          <p>Weekdays: 08:00 - 22:00</p>
+          <p>Weekend: 10:00 - 23:00</p>
+        </div>
+        <div class="footer-block">
+          <p>+47 332 65 734</p>
+          <p>CloudSpa@spa.com</p>
+        </div>
+        <div class="footer-block">
+          <p>Raveien 215, 3184 Borre</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+    
+    
+    <script src="../src/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
