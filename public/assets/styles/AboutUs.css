@@ -15,27 +15,23 @@
 /* About Us picture*/
 #aboutUs{
 float: right;
-width: 27.25rem;
-height: 33.125rem;
-margin-bottom: 10rem;
-margin-right: 15rem;
-margin-top: 0rem;
--webkit-box-shadow: 50px -36px 0px 18px rgba(142,168,195,1);
--moz-box-shadow: 50px -36px 0px 18px rgba(142,168,195,1);
-box-shadow: 50px -36px 0px 18px rgba(142,168,195,1);
+width: 20%;
+height: 20%;
+margin-bottom: 10%;
+margin-right: 15%;
+-webkit-box-shadow: 3.125rem -2.25rem 0rem 1.12rem rgba(142,168,195,1);
+-moz-box-shadow: 3.125rem -2.25rem 0rem 1.12rem rgba(142,168,195,1);
+box-shadow: 3.125rem -2.25rem 0rem 1.12rem rgba(142,168,195,1);
 }
 
 /* id="About-us" part*/
 #about-us{
   width: 50%;
   padding: 2em;
-  margin-left: 5rem;
-  margin-top: 15rem;
+  margin-left: 5%;
+  margin-top: 15%;
   font-size: 1.5em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  text-align: left;
 }
 /* Header/title*/
 #about-us h1{
@@ -159,11 +155,12 @@ line-height: 1.6;
 }
 .ourHistory-block img { 
   height: auto;
-  width: 50rem;
-  height: 35rem;
+  width: 50%;
+  height: 35%;
   margin-left: auto;
   margin-right: auto;
-  padding: 6rem;
+  margin-top: 2%;
+  padding: 5%;
 }
 .awards{
   display: flex;
@@ -242,20 +239,23 @@ line-height: 1.6;
 @media (max-width: 1700px) {
   
   #aboutUs {
-    display: none;
+    margin-left: 25%;
+    margin-bottom: -10%;
+    margin-top: 0%;
+    margin-right: 25%;
   }
   
   #about-us{
-    width: 90%;
-    padding: 1em;
-    margin-top: 5em;
-    font-size: 1.7em;
+    width: 30%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    font-size: 1.2em;
   }
   .ourHistory-block #our-story{
     width: 90%;
     padding: 1em;
     margin-top: 1em;
-    font-size: 1.7em;
+    font-size: 1.2em;
   }
   .ourHistory-block img{
     display: flex;
@@ -295,9 +295,10 @@ line-height: 1.6;
   }
   
   #about-us{
-    width: 90%;
-    padding: 1em;
-    margin-top: 1em;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5%;
+    margin-left: 0%;
     font-size: 1em;
   }
 
@@ -344,13 +345,13 @@ line-height: 1.6;
   }
   
   #about-us{
-    width: 90%;
-    padding: 1em;
-    margin-top: 1em;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5%;
     font-size: 1em;
   }
   .ourHistory-block #our-story{
-    width: 90%;
+    width: 100%;
     padding: 1em;
     margin-top: 1em;
     font-size: 1em;
