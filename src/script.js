@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   const wrapper = document.querySelector(".wrapper");
   const loginLink = document.querySelector(".login-link");
   const registerLink = document.querySelector(".register-link");
@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
   btnPopup.addEventListener("click", function () {
     wrapper.classList.add("active-popup");
   });
-});
+});*/
+
+/*our services*/ 
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.querySelector(".services-slider");
   var nextButton = document.querySelector(".next-arrow");
@@ -53,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+/*our Calendar*/ 
 
 document.addEventListener("DOMContentLoaded", function () {
   const monthYearTitle = document.getElementById("month-year");

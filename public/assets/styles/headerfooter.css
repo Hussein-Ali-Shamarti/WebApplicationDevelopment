@@ -73,80 +73,132 @@ header {
   color: rgb(0, 0, 0);
 }
 
-/*footer*/
-
-/*footer*/
+/* Footer Base Styles */
 .footer {
   background: #23395b;
   color: #ffffff;
-  padding: 20px 0;
-}
-
-.footer-content {
+  font-family: "Inter", sans-serif;
+  padding: 40px 80px; /* Adjust padding as necessary */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 40px;
+  align-items: flex-start;
 }
 
-.footer-logo {
-  width: 114px;
-  height: auto;
-}
-
-.footer-nav {
+/* Footer Logo and Navigation */
+.footer-logo-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.footer-logo {
+  width: 110px; /* Adjust to match the size of your logo */
+  margin-bottom: 10px; /* Space between logo and navigation links */
+}
+
+.footer-nav {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  margin: 10px 21px;
 }
 
 .footer-nav a {
-  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 9px -2px; /* Space around the navigation links */
+  text-decoration: none;
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
-  color: #ffffff;
   text-align: center;
-  margin: 5px 0;
 }
 
-.footer-block h3 {
-  font-family: "Inter", sans-serif;
+
+/* Contact Information */
+.contact-info {
+  position: absolute;
+  right: 80px; /* Adjust this value based on the desired distance from the right edge */
+  top: 50%; /* Start at the vertical middle of the footer */
+  transform: translateY(-50%); /* Center it vertically */
+  text-align: right; /* Align the text to the right */
+}
+
+.contact-info div {
+  text-align: center;
   font-weight: 300;
   font-size: 20px;
-  line-height: 30px;
+  margin: 5px 0; /* Adjust the margin as needed */
 }
 
-.footer-block p {
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
+/* Social Media Icons and Address */
+.social-media-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 40px; /* Adjust as needed */
+  right: 80px; /* Match the right value with contact-info for alignment */
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: -1890px; /* Adjust this to push more to the right if necessary */
+}
+
+.social-icon {
+  margin: 0 10px; /* Space between icons */
+  text-decoration: none;
+}
+
+.social-icon img {
+  width: 44px; /* Size of social icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.footer-address {
+  text-align: right;
   font-size: 20px;
-  line-height: 30px;
+  margin-right: -970px; /* Adjust this to push more to the right if necessary */
 }
 
-/* Add responsive behavior */
+/* Responsive Behavior */
 @media screen and (max-width: 768px) {
-  .footer-content {
+  .footer {
+    padding: 20px;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+  }
+
+  .footer-logo-nav,
+  .contact-info,
+  .social-media-address {
+    align-items: center;
+    width: 100%;
   }
 
   .footer-nav {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-nav a {
-    margin: 10px;
+    margin: 5px 0; /* Vertical spacing for mobile */
   }
 
-  .footer-block {
-    margin: 10px 0;
+  .social-media {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-media-address {
+    order: 3;
+  }
+
+  .footer-address {
+    order: 4;
+    text-align: center;
   }
 }
-
-/*footer*/
