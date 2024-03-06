@@ -73,132 +73,111 @@ header {
   color: rgb(0, 0, 0);
 }
 
-/* Footer Base Styles */
 .footer {
-  background: #23395b;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  padding: 40px 80px; /* Adjust padding as necessary */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  background-color: #23395b; /* Dark background */
+  color: #ffffff; /* White text color */
+  font-family: "Arial", sans-serif; /* Example font */
+  padding: 40px 0; /* Padding around the footer */
 }
 
-/* Footer Logo and Navigation */
-.footer-logo-nav {
+.footer-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer-logo {
-  width: 110px; /* Adjust to match the size of your logo */
-  margin-bottom: 10px; /* Space between logo and navigation links */
+  max-width: 100px; /* Set the size of your logo */
+  margin-bottom: 20px;
 }
 
 .footer-nav {
-  display: grid;
-  justify-content: left;
-  align-items: center;
-  margin: 10px 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .footer-nav a {
   color: #ffffff;
-  margin: 9px -2px; /* Space around the navigation links */
   text-decoration: none;
-  font-weight: 300;
-  font-size: 16px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
-
-/* Contact Information */
-.contact-info {
-  position: absolute;
-  right: 80px; /* Adjust this value based on the desired distance from the right edge */
-  top: 50%; /* Start at the vertical middle of the footer */
-  transform: translateY(-50%); /* Center it vertically */
-  text-align: right; /* Align the text to the right */
+.opening-hours h3,
+.footer-address p,
+.footer-contacts p {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.contact-info div {
-  text-align: center;
-  font-weight: 300;
-  font-size: 20px;
-  margin: 5px 0; /* Adjust the margin as needed */
-}
-
-/* Social Media Icons and Address */
-.social-media-address {
+.footer-contacts {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 40px; /* Adjust as needed */
-  right: 80px; /* Match the right value with contact-info for alignment */
+  align-items: center;
 }
-.social-media {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  margin-right: -1890px; /* Adjust this to push more to the right if necessary */
+
+.footer-contacts img {
+  width: 20px; /* Adjust the size of your icons */
+  height: auto;
+  margin-right: 10px;
 }
 
 .social-icon {
-  margin: 0 10px; /* Space between icons */
-  text-decoration: none;
+  margin: 5px 0; /* Spacing between social icons */
 }
 
 .social-icon img {
-  width: 44px; /* Size of social icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 24px; /* Adjust the size of your icons */
+  height: auto;
+}
+
+.footer-address-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adjust as necessary */
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Space between icons and address */
 }
 
 .footer-address {
-  text-align: right;
-  font-size: 20px;
-  margin-right: -970px; /* Adjust this to push more to the right if necessary */
+  font-size: 14px;
+  text-align: center; /* Center address text */
 }
 
-/* Responsive Behavior */
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 20px;
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .footer-content {
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer-logo-nav,
-  .contact-info,
-  .social-media-address {
-    align-items: center;
-    width: 100%;
   }
 
   .footer-nav {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .footer-nav a {
-    margin: 5px 0; /* Vertical spacing for mobile */
+  .footer-contacts,
+  .social-media,
+  .footer-address-social {
+    align-items: center;
   }
 
   .social-media {
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
   }
 
-  .social-media-address {
-    order: 3;
-  }
-
-  .footer-address {
-    order: 4;
-    text-align: center;
+  .social-icon {
+    margin: 0 5px; /* Horizontal spacing for icons on mobile */
   }
 }
