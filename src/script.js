@@ -17,7 +17,7 @@
   });
 });*/
 
-/*our services*/ 
+/*our services*/
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.querySelector(".services-slider");
   var nextButton = document.querySelector(".next-arrow");
@@ -56,8 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-/*our Calendar*/ 
+/*our Calendar*/
 
 document.addEventListener("DOMContentLoaded", function () {
   const monthYearTitle = document.getElementById("month-year");
