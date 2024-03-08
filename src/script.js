@@ -1,4 +1,5 @@
-/*document.addEventListener("DOMContentLoaded", function () {
+/*login/register*/
+document.addEventListener("DOMContentLoaded", function () {
   const wrapper = document.querySelector(".wrapper");
   const loginLink = document.querySelector(".login-link");
   const registerLink = document.querySelector(".register-link");
@@ -15,7 +16,7 @@
   btnPopup.addEventListener("click", function () {
     wrapper.classList.add("active-popup");
   });
-});*/
+});
 
 /*our services*/
 document.addEventListener("DOMContentLoaded", function () {
