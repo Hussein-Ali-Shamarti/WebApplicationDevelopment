@@ -20,25 +20,18 @@
 
 <body>
 
-<header>
-    <nav class="navigation">
-        <a href="index.html" class="logo-container">
-          <img
-            src="../public/assets/Pictures/CloudSpaTransaprent.png"
-            alt="imagelogo"
-            class="logoo"
-          />
-        </a>
-        <div class="nav-items">
-          <a href="Services.html">Services</a>
-          <a href="Treatments.html">Treatments</a>
-          <a href="AboutUs.html">About us</a>
-          <a href="ContactUs.html">Contact us</a>
-          <a href="MyPage.html">My page</a>
-          <button class="btnLogin-popup">Book Now</button>
-        </div>
-      </nav>
-</header>
+     <!-- Header-->
+     <div id="header-placeholder"></div>
+     <script>
+       fetch('header.html') // Make sure the path to 'header.html' is correct
+           .then(response => response.text())
+           .then(data => {
+               document.getElementById('header-placeholder').innerHTML = data;
+           })
+           .catch(error => console.error('Error loading the header:', error));
+       </script>
+      <!-- Header-->
+ 
 
 <main>
   <section id="contact-info">

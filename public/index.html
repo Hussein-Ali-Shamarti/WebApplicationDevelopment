@@ -7,30 +7,26 @@
     <link rel="stylesheet" href="../public/assets/styles/headerfooter.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="./path/to/firebase-config.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <title>Cloud Spa</title>
   </head>
-
   <body>
-    <header>
-      <nav class="navigation">
-        <a href="index.html" class="logo-container">
-          <img
-            src="../public/assets/Pictures/CloudSpaTransparent.png"
-            alt="imagelogo"
-            class="logoo"
-          />
-        </a>
-        <div class="nav-items">
-          <a href="Services.html">Services</a>
-          <a href="Treatments.html">Treatments</a>
-          <a href="AboutUs.html">About us</a>
-          <a href="ContactUs.html">Contact us</a>
-          <a href="MyPage.html">My page</a>
-          <button class="btnLogin-popup">Book Now</button>
-        </div>
-      </nav>
-    </header>
 
+     <!-- Header-->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch('header.html') // Make sure the path to 'header.html' is correct
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('header-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading the header:', error));
+      </script>
+           <!-- Header-->
 
     <div class="image-container">
       <img
@@ -251,62 +247,9 @@
     </div>
   </section>
 
+  
 
-  <section>
-<footer class="flex-container">
-  <!-- boks logo & sub pages -->
-  <div class="box1 box">
-    <img src="/public/assets/Pictures/CloudSpaTransaprent.png" alt="" />
-    <ul class="subpages listItems">
-      <li><a href="#index.html"> Home</a></li>
-      <li><a href="#Services.html"> Services</a></li>
-      <li><a href="#Treatments.html">Treatments</a></li>
-      <li><a href="#AboutUs.html"> About Us</a></li>
-      <li><a href="#ContactUs.html">Contact Us</a></li>
-      <li><a href="#mypage">My Page</a></li>
-    </ul>
-  </div>
-  <!-- boks Opening hours -->
-  <div class="box2 box">
-    <ul class="subpages listItems">
-      <li>Opening hours</li>
-      <li>Weekdays: 08:00 - 22:00</li>
-      <li>Weekend: 10:00 - 23:00</li>
-    </ul>
-  </div>
-  <!-- boks contact info -->
-  <div class="box3 box">
-    <ul class="contactUs listItems">
-      <li><i class="fas fa-phone"></i> <a href="#">+47 332 65 734</a></li>
-      <li><i class="far fa-envelope"></i> <a href="#">CloudSpa@spa.com</a></li>
-    </ul>
-  </div>
-  <!-- boks socials -->
-  <div class="box4 box">
-    <ul id="socialMediaLinks">
-      <li>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </li>
-      <!-- Add more social media icons as needed -->
-    </ul>
-    <ul>
-      <li>
-        <i class="fas fa-map-marker-alt"></i>
-        <a href="#">Raveien 215, 3184 Borre</a>
-      </li>
-    </ul>
-  </div>
-</footer>
-  </section>
-  
-  
-<!--login/register
+<!--login Form-->
 <section>
     <div class="wrapper">
       <div class="form-box login">
@@ -336,63 +279,66 @@
         </form>
       </div>
 
-      <div class="form-box register">
-        <h2>Registration</h2>
-        <form action="#">
-          <div class="input-box">
-            <span class="icon">
-              <ion-icon name="person"></ion-icon>
-            </span>
-            <input type="email" required />
-            <label>Username</label>
-          </div>
 
-          <div class="input-box">
-            <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required />
-            <label>Email</label>
-          </div>
+        <!-- Registration Form -->
+        <div class="form-box register">
+          <h2>Registration</h2>
+          <form id="registration-form">
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="text" name="firstName" required />
+                  <label>First Name</label>
+              </div>
 
-          <div class="input-box">
-            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" required />
-            <label>Password</label>
-          </div>
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="text" name="lastName" required />
+                  <label>Last Name</label>
+              </div>
 
-          <div class="remember-forgot">
-            <label>
-              <input type="checkbox" /> I agree to the terms and
-              conditions</label
-            >
-          </div>
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                  <input type="email" name="email" required />
+                  <label>Email</label>
+              </div>
 
-          <button type="submit" class="btn">Register</button>
-          <div class="login-register">
-            <p>
-              Already have an account?
-              <a href="#" class="login-link">Sign in now.</a>
-            </p>
-          </div>
-        </form>
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                  <input type="password" name="password" required />
+                  <label>Password</label>
+              </div>
+
+              <div class="input-box">
+                  <span class="icon"><ion-icon name="globe"></ion-icon></span>
+                  <select name="country" required>
+                      <option value="">Select a country</option>
+                      <option value="Norway">Norway</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Sweden">Sweden</option>
+                  </select>
+                  <label>Country</label>
+              </div>
+              <button type="submit" class="btn">Register</button>
+          </form>
       </div>
     </div>
     <main id="main-content">
     </main>
   </section>
-login/register-->
+<!--login/register-->
 
+     <!-- footer-->
+<div id="footer"></div>
+<script>
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    });
+</script>
+     <!-- footer-->
 
-
-
-    
-    
-    <script src="../src/script.js"></script>
-
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
-
       // Sample function to navigate and load content dynamically
       function navigateTo(section) {
         const mainContent = document.getElementById("main-content");
@@ -431,9 +377,66 @@ login/register-->
         });
 
         btnPopup.addEventListener("click", function () {
-          wrapper.classList.add("active-popup");
-        });
+        if (wrapper.classList.contains("active-popup")) {
+            wrapper.classList.remove("active-popup");
+        } else {
+            wrapper.classList.add("active-popup");
+        }
+    });
+
       });
     </script>
+
+
+
+<script src="js/loadFirebase.js"></script>
+<script src="../src/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+
+<script>
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const database = firebase.database();
+
+  document.addEventListener("DOMContentLoaded", function() {
+      const registrationForm = document.getElementById("registration-form");
+      registrationForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          // Collect form data
+          const firstName = document.querySelector("[name='firstName']").value;
+          const lastName = document.querySelector("[name='lastName']").value;
+          const email = document.querySelector("[name='email']").value;
+          const password = document.querySelector("[name='password']").value;
+          const country = document.querySelector("[name='country']").value;
+
+          // Firebase: Create user with Email and Password
+          auth.createUserWithEmailAndPassword(email, password)
+              .then((userCredential) => {
+                  // User created, now store additional information in Realtime Database
+                  const userId = userCredential.user.uid;
+                  database.ref('users/' + userId).set({
+                      firstName: firstName,
+                      lastName: lastName,
+                      email: email, // Optional, since it's already in Auth
+                      country: country
+                  })
+                  .then(() => console.log("User data saved."))
+                  .catch((error) => console.error("Could not save user data:", error));
+              })
+              .catch((error) => {
+                  console.error("Error creating user:", error.message);
+              });
+      });
+  });
+</script>
   </body>
 </html>

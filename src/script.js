@@ -136,3 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initially generate the calendar
   generateCalendar(currentDate);
 });
+
+
+include()

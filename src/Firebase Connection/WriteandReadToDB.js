@@ -1,25 +1,40 @@
-// Import the database and ref, set, get functions from Firebase
-import { database } from "./services/firebase-config";
-import { ref, set, get } from "firebase/database";
+import { writeDataToFirebase, readDataFromFirebase } from "../database"; // Assuming database.js is where you define Firebase functions
 
-// Function to write data to the database
-function writeToDatabase(userId, data) {
-  set(ref(database, "users/" + userId), data);
+// Make sure to load the Firebase SDK before this script runs
+
+// Function to write data to Firebase
+function writeDataToFirebase() {
+  // Assuming firebase has been initialized elsewhere
+  firebase
+    .database()
+    .ref("firebase-config.js")
+    .set({
+      key: "value",
+      anotherKey: "anotherValue"
+    })
+    .then(() => {
+      console.log("Data written successfully!");
+    })
+    .catch((error) => {
+      console.error("An error occurred:", error);
+    });
 }
 
-// Function to read data from the database
-function readFromDatabase(userId) {
-  return get(ref(database, "users/" + userId))
+// Function to read data from Firebase
+function readDataFromFirebase() {
+  // Assuming firebase has been initialized elsewhere
+  firebase
+    .database()
+    .ref("firebase-config.js")
+    .get()
     .then((snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
-        return snapshot.val();
       } else {
         console.log("No data available");
-        return null;
       }
     })
     .catch((error) => {
-      console.error(error);
+      console.error("An error occurred:", error);
     });
 }

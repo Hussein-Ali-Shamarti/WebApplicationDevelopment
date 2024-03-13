@@ -628,6 +628,7 @@ body {
 }
 
 .wrapper {
+  display: none; /* Ensure the wrapper is initially hidden */
   position: relative;
   width: 400px;
   height: 440px;
@@ -636,7 +637,6 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
