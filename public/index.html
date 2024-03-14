@@ -326,18 +326,6 @@
   </section>
 <!--login/register-->
 
-     <!-- footer-->
-<div id="footer"></div>
-<script>
-fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer').innerHTML = data;
-    });
-</script>
-     <!-- footer-->
-
-
     <script>
       // Sample function to navigate and load content dynamically
       function navigateTo(section) {
@@ -433,9 +421,21 @@ fetch('footer.html')
               })
               .catch((error) => {
                   console.error("Error creating user:", error.message);
-              });
+           });
       });
   });
 </script>
+
+     <!-- footer-->
+     <div id="footer"></div>
+     <script>
+     fetch('footer.html')
+         .then(response => response.text())
+         .then(data => {
+             document.getElementById('footer').innerHTML = data;
+         });
+     </script>
+          <!-- footer-->
+          
   </body>
 </html>
