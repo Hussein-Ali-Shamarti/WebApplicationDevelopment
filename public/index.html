@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+         <!-- Link to files-->
     <link rel="stylesheet" href="../public/assets/styles/styles.css" />
-    <link rel="stylesheet" href="../public/assets/styles/headerfooter.css">
+    <link rel="stylesheet" href="../public/assets/styles/headerfooter.css" />
+    <link rel="stylesheet" href="../public/assets/styles/LoginRegister.css" />
+
+         <!-- Link to libraries-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -248,184 +253,6 @@
 
   
 
-<!--login Form-->
-<section>
-    <div class="wrapper">
-      <div class="form-box login">
-        <h2>login</h2>
-        <form action="#">
-          <div class="input-box">
-            <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" required />
-            <label>Email</label>
-          </div>
-          <div class="input-box">
-            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" required />
-            <label>Password</label>
-          </div>
-          <div class="remember-forgot">
-            <label> <input type="checkbox" /> Remember Me</label>
-            <a href="#">Forgot Password?</a>
-          </div>
-          <button type="submit" class="btn">Sign In</button>
-          <div class="login-register">
-            <p>
-              Don't have an account yet?
-              <a href="#" class="register-link">Create one now.</a>
-            </p>
-          </div>
-        </form>
-      </div>
-
-
-        <!-- Registration Form -->
-        <div class="form-box register">
-          <h2>Registration</h2>
-          <form id="registration-form">
-              <div class="input-box">
-                  <span class="icon"><ion-icon name="person"></ion-icon></span>
-                  <input type="text" name="firstName" required />
-                  <label>First Name</label>
-              </div>
-
-              <div class="input-box">
-                  <span class="icon"><ion-icon name="person"></ion-icon></span>
-                  <input type="text" name="lastName" required />
-                  <label>Last Name</label>
-              </div>
-
-              <div class="input-box">
-                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                  <input type="email" name="email" required />
-                  <label>Email</label>
-              </div>
-
-              <div class="input-box">
-                  <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                  <input type="password" name="password" required />
-                  <label>Password</label>
-              </div>
-
-              <div class="input-box">
-                  <span class="icon"><ion-icon name="globe"></ion-icon></span>
-                  <select name="country" required>
-                      <option value="">Select a country</option>
-                      <option value="Norway">Norway</option>
-                      <option value="Germany">Germany</option>
-                      <option value="Sweden">Sweden</option>
-                  </select>
-                  <label>Country</label>
-              </div>
-              <button type="submit" class="btn">Register</button>
-          </form>
-      </div>
-    </div>
-    <main id="main-content">
-    </main>
-  </section>
-<!--login/register-->
-
-    <script>
-      // Sample function to navigate and load content dynamically
-      function navigateTo(section) {
-        const mainContent = document.getElementById("main-content");
-        fetchContent(section).then((content) => {
-          mainContent.innerHTML = content;
-        });
-      }
-
-      // Sample function to fetch content (you need to implement this)
-      function fetchContent(section) {
-        // Implement logic to fetch content based on the section
-        // You may use fetch or load HTML files dynamically
-        // Return a promise that resolves with the content
-        return new Promise((resolve) => {
-          // Example: resolve with simple HTML content
-          resolve(
-            `<h2>${
-              section.charAt(0).toUpperCase() + section.slice(1)
-            }</h2><p>This is the ${section} page content.</p>`
-          );
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const wrapper = document.querySelector(".wrapper");
-        const loginLink = document.querySelector(".login-link");
-        const registerLink = document.querySelector(".register-link");
-        const btnPopup = document.querySelector(".btnLogin-popup");
-
-        registerLink.addEventListener("click", function () {
-          wrapper.classList.add("active");
-        });
-
-        loginLink.addEventListener("click", function () {
-          wrapper.classList.remove("active");
-        });
-
-        btnPopup.addEventListener("click", function () {
-        if (wrapper.classList.contains("active-popup")) {
-            wrapper.classList.remove("active-popup");
-        } else {
-            wrapper.classList.add("active-popup");
-        }
-    });
-      });
-    </script>
-
-
-
-<script src="js/loadFirebase.js"></script>
-<script src="../src/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<!-- Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
-
-<script>
-
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const database = firebase.database();
-
-  document.addEventListener("DOMContentLoaded", function() {
-      const registrationForm = document.getElementById("registration-form");
-      registrationForm.addEventListener("submit", function(event) {
-          event.preventDefault();
-
-          // Collect form data
-          const firstName = document.querySelector("[name='firstName']").value;
-          const lastName = document.querySelector("[name='lastName']").value;
-          const email = document.querySelector("[name='email']").value;
-          const password = document.querySelector("[name='password']").value;
-          const country = document.querySelector("[name='country']").value;
-
-          // Firebase: Create user with Email and Password
-          auth.createUserWithEmailAndPassword(email, password)
-              .then((userCredential) => {
-                  // User created, now store additional information in Realtime Database
-                  const userId = userCredential.user.uid;
-                  database.ref('users/' + userId).set({
-                      firstName: firstName,
-                      lastName: lastName,
-                      email: email, // Optional, since it's already in Auth
-                      country: country
-                  })
-                  .then(() => console.log("User data saved."))
-                  .catch((error) => console.error("Could not save user data:", error));
-              })
-              .catch((error) => {
-                  console.error("Error creating user:", error.message);
-           });
-      });
-  });
-</script>
-
      <!-- footer-->
      <div id="footer"></div>
      <script>
@@ -437,5 +264,26 @@
      </script>
           <!-- footer-->
           
+     <!-- login/register-->
+     <div id="wrapper"></div>
+     <script>
+     fetch('LoginRegister.html')
+         .then(response => response.text())
+         .then(data => {
+             document.getElementById('wrapper').innerHTML = data;
+             // Assuming initializeFormBehavior is accessible, call it here
+             initializeFormBehavior();
+         });
+     </script>
+     
+          <!-- login/register-->
+     
+     
+
+
+<script src="../src/script.js"></script>
+<script src="../src/LoginRegister.js"></script>
+
+
   </body>
 </html>

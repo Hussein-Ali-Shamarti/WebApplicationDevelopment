@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="../public/assets/styles/LoginRegister.css" />
+<script src="../src/LoginRegister.js"></script>
+
+<!--login Form-->
+<section>
+  <div class="wrapper">
+    <div class="form-box login">
+      <h2>login</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" required />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label> <input type="checkbox" /> Remember Me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Sign In</button>
+        <div class="login-register">
+          <p>
+            Don't have an account yet?
+            <a href="#" class="register-link">Create one now.</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form id="registration-form">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" name="firstName" required />
+          <label>First Name</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" name="lastName" required />
+          <label>Last Name</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" name="email" required />
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" name="password" required />
+          <label>Password</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="globe"></ion-icon></span>
+          <select name="country" required>
+            <option value="">Select a country</option>
+            <option value="Norway">Norway</option>
+            <option value="Germany">Germany</option>
+            <option value="Sweden">Sweden</option>
+          </select>
+          <label>Country</label>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <p>
+          Already have an account?
+          <a href="#" class="rform-box login">Create one now.</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <main id="main-content"></main>
+</section>
+<!--login/register-->
