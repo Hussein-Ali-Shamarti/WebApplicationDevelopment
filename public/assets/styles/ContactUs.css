@@ -8,10 +8,10 @@
 }
 
 body, h1, h2, p, a, input, textarea, button {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 header {
   position: fixed;
@@ -24,101 +24,88 @@ header {
   justify-content: space-between;
 }
 
-
-  
-  /* Utility classes for spacing */
-  .padding-20 {
-    padding: 20px;
-  }
-  
-  .margin-bottom-16 {
-    margin-bottom: 16px;
-  }
-  
-  /* Main contact sections */
-  main {
-    padding: 85px 20px; /* Added padding to the top to avoid overlap with the fixed header */
-  }
-  
-  #contact-info,
-  #opening-hours,
-  #contact-form {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(213, 33, 33, 0.1);
-  }
-  
-  #contact-info h1,
-  #opening-hours h2,
-  #contact-form h2 {
-    color: #000000;
-    margin-bottom: 20px;
-  }
-  
-  #contact-info p,
-  #opening-hours p {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  
-  /* Contact info links styling */
-  #contact-info a {
-    color: #8EA8C3;
-    text-decoration: none; /* kan fjernes hvis man ønsker strek under linkene */
-  }
-  
-  
-  #contact-form button {
-    padding: 10px;
-    background-color: #cbf7ed;
-    color: #23395b;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  #contact-form {
-    background-color: #406E8E; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+/* Main contact sections */
+main {
+  padding: 85px 20px; /* Added padding to the top to avoid overlap with the fixed header */
+}
 
 
-  #contact-form input,
-  #contact-form textarea {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc; /* Grensefarge */
-    border-radius: 4px; 
-    background-color: #D9D9D9; 
-    color: #010101; /* Tekstfarge */
-    font-size: 14px; /* Størrelse på tekst */
-  }
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff; /* Eller hvilken som helst bakgrunnsfarge du foretrekker */
+}
 
-  
-  #contact-form label {
-    color: #FFFFFF; /* Farge for label-tekster */
-    margin-bottom: 5px;
-    display: block;
-  }
-  
 
-  /* Responsive design */
-  @media (min-width: 768px) {
-    main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
-    }
-  
-    #contact-form {
-      grid-column: 1 / span 2; /* Contact form spans across both columns */
-    }
-  }
+.contact-info h1 {
+  font-size: 3rem;
+ font-family: "Inter", sans-serif;
+  margin-bottom: 0.5em; /* Gir litt plass under overskriften */
+  color: #000000; /* En mørk farge for tekst */
+}
+
+.contact-info p {
+  font-size: larger;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 1.5em; /* Gir litt plass mellom paragrafene */
+  color: #000000; /* En standard mørkegrå farge for tekst */
+
+}
+
+.contact-info a {
+  color: #000000; /* En farge som står ut, endre etter eget design */
+  text-decoration: none; /* Fjerner understreking av lenker */
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Legger til understreking ved hover */
+}
+
+.contact-image img {
+  margin-top: 100px; 
+}
+
+
+
+
+
+.opening-section {
+  display:flex;
+  background: #8EA8C3; /* En blå bakgrunnsfarge */
+  color: white; /* Hvit tekstfarge */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+
+.opening-hours {
+  font-family: "Inter", sans-serif;
+  padding: 100px; /* Plassering av tekst */
+  position:relative;
+  height: auto;
+}
+
+.opening-hours h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem; /* Juster størrelsen på overskriften */
+  margin-bottom: 0.5em; /* Plass under overskriften */
+}
+
+.opening-hours p {
+  font-family: "Inter", sans-serif;
+  font-size: larger; /* Størrelsen på paragrafen */
+  margin-bottom: 0.50em; /* Plass mellom paragrafene */
+}
+
+
+
+
+
+
 
 
 .logo-container {

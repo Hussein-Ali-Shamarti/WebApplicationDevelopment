@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../public/assets/styles/ContactUs.css" rel="stylesheet" />
-    <link href="../public/assets/styles/headerfooter.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <title>Cloud Spa</title>
-  </head>
-</html>
-
-
-<title>Cloud Spa - Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/assets/styles/ContactUs.css" rel="stylesheet">
+    <link href="../public/assets/styles/headerfooter.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Cloud Spa - Contact Us</title>
+    <script src="path/to/your/contactValidation.js"></script>
 </head>
-<script src="path/to/your/contactValidation.js"></script>
 
 <body>
 
@@ -34,21 +26,38 @@
  
 
 <main>
-  <section id="contact-info">
-    <img src="../public/assets/Pictures/openingHours.jpg" width="300" height="200">
-    <h1>Contact us</h1>
-    <p>Feel free to give us a call or send an email if you have any questions!</p>
-    <p>Phone: <a href="tel:+4733265734">+47 332 65 734</a></p>
-    <p>Email: <a href="mailto:CloudSpa@spa.com">CloudSpa@spa.com</a></p>
-    <p>Address: Ravieien 215, 3184 Borre</p>
-  </section>
+  <div class="contact-section">
+    <div class="contact-info">
+      <h1>Contact us</h1>
+      <p>Feel free to give us a call or send an email if you have any questions!</p>
+      <p>Phone: <a href="tel:+4733265734">+47 332 65 734</a></p>
+      <p>Email: <a href="mailto:CloudSpa@spa.com">CloudSpa@spa.com</a></p>
+      <p>Address: Ravieien 215, 3184 Borre</p>
+    </div>
+    <div class="contact-image">
+      <img algin= "right" src="../public//assets//Pictures/contactUs.jpg" width="400" height="500" >
+    </div>
+  </div>
 
-  <section id="opening-hours">
-    <img src="../public//assets//Pictures/contactUs.jpg"  width="300" height="450">
-    <h2>Opening hours</h2>
-    <p>Weekdays: Monday - Friday 08:00-22:00</p>
-    <p>Weekends: Saturday - Sunday 10:00-23:00</p>
-  </section>
+
+
+
+
+
+  <div class="opening-section">
+    <div class="opening-image">
+      <img src="../public/assets/Pictures/openingHours.jpg"  width="400" height="500">
+    </div>
+    <div class="opening-hours">
+      <h2>Opening hours</h2>
+      <p><br>Weekdays: <br>
+        Monday - Friday 08:00-22:00</p>
+      <p><br>Weekends: <br>
+         Saturday - Sunday 10:00-23:00</p>
+    </div>
+  </div>
+
+
 
   <section id="contact-form">
     <h2>Have more questions?</h2>
